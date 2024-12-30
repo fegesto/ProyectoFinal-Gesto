@@ -1,0 +1,10 @@
+.btnBoostrap{
+background-color: #b559ce;
+border-color: #b559ce;
+transition: background-color 0.5s;
+}
+
+.btnBoostrap:hover{
+    background-color: #713881;
+    border-color: #713881;
+    }
