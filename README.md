@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Crear Markdown README.md
+
+Se crea un e-commerce en base a un emprendimiento familiar para el curso de React cursado en CoderHouse. Con esto logro un doble objetivo, el adquirir conocimientos e impulsar este emprendimiento.
+
+Features:
+* Obtener productos de una db en Firestore
+* Sumar productos al carrito
+* Aviso si no hay productos en stock
+* Eliminar un producto del carrito
+* Vaciar carrito
+* Generar orden de compra con un id mediante el pedido de datos

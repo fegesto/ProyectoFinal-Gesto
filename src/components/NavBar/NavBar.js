@@ -10,16 +10,16 @@ import { NavLink, Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <nav>
+        <nav className='NavBarContainer'>
             <Navbar bg="light" data-bs-theme="light">
                 <Container>
                     <Navbar.Brand><Link to='/'><img src={logoMarca} className="d-inline-block align-top" alt='logo de Artesanias PatryAppe' width = "70"/></Link></Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link><NavLink to ={`/category/Almohadones`} className= {({ isActive }) => isActive ? 'ActiveOption' :'Option'}><Button variant="primary" className='btnBoostrap'>Almohadon matero</Button></NavLink></Nav.Link>
-                        <Nav.Link><NavLink to ={`/category/Amigurimis`} className= {({ isActive }) => isActive ? 'ActiveOption' :'Option'}><Button variant="primary" className='btnBoostrap'>Amigurumis</Button></NavLink></Nav.Link>
-                        <Nav.Link><NavLink to ={`/category/Sahumerios`} className= {({ isActive }) => isActive ? 'ActiveOption' :'Option'}><Button variant="primary" className='btnBoostrap'>Sahumerios</Button></NavLink></Nav.Link>
+                    <Button variant="primary" className='btnBoostrap'><NavLink to ={`/category/Almohadones`} className= {({ isActive }) => isActive ? 'ActiveOption' :'disabled'}>Almohadon matero</NavLink></Button>
+                    <Button variant="primary" className='btnBoostrap'><NavLink to ={`/category/Amigurimis`} className= {({ isActive }) => isActive ? 'ActiveOption' :'disabled'}>Amigurumis</NavLink></Button>
+                    <Button variant="primary" className='btnBoostrap'><NavLink to ={`/category/Sahumerios`} className= {({ isActive }) => isActive ? 'ActiveOption' :'disabled'}>Sahumerios</NavLink></Button>
                     </Nav>
-                    <CartWidget />
+                    <CartWidget /><Link to={`/cart`} className=  {({ isActive }) => isActive ? 'ActiveOption' :'Option'}></Link>
                 </Container>
             </Navbar>
         </nav>

@@ -1,0 +1,20 @@
+h3 {
+    margin: 15px;
+}
+
+.cartItemContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.trashButton{
+    width: fit-content;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.trashButton:hover{
+    background-color: rgba(206, 32, 32, 0.897);
+}

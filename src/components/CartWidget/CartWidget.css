@@ -1,0 +1,19 @@
+.CartWidgetContainer{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.CartWidgetContainer p {
+    margin-top: 40%;
+    min-width: 100%;
+    border-radius: 100%;
+    background-color: #713881;
+    color: white;
+}
