@@ -94,7 +94,7 @@ const Checkout = () => {
         <div>
             <h1 className="CheckoutTitle">Tu numero de pedidio es:</h1>
             <h1 className="CheckoutSubTitle">{orderId}</h1>
-            <CartWidget/><Link to={`/cart`}><Button className="btnBoostrap">Seguir comprando</Button></Link>
+            <Link to={`/cart`}><Button className="btnBoostrap">Seguir comprando</Button></Link>
         </div>)
 
     }
