@@ -6,21 +6,23 @@ import { collection, addDoc } from "firebase/firestore";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import Loader from "../Loader";
 import './Checkout.css'
-import { NavLink, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
-import CartWidget from "../CartWidget/CartWidget";
 
 
 const Checkout = () => {
     
     const [loading, setLoading] = useState(false);
+    const [email, setEmail] = useState('');
     const [orderId, setOrderId] = useState('');
+    const {totalQuantity} = useContext(CartContext);
     
 
     const {cart, total, clearCart} = useContext(CartContext);
 
     const createOrder = async (userData) => {
         const {name, phone, email} = userData;
+        setEmail(email);
         setLoading(true);
 
         try{
@@ -94,9 +96,22 @@ const Checkout = () => {
         <div>
             <h1 className="CheckoutTitle">Tu numero de pedidio es:</h1>
             <h1 className="CheckoutSubTitle">{orderId}</h1>
+            <h2>Nos vamos a contactar a tu mail {email} para coordinar la entrega</h2>
+            <img className="CheckoutImg" src="https://res.cloudinary.com/dq7dgycv9/image/upload/v1738631640/pngwing.com_paxg22.png"></img>
+            <br></br>
             <Link to={`/cart`}><Button className="btnBoostrap">Seguir comprando</Button></Link>
         </div>)
 
+    }
+
+    if(totalQuantity<1){
+        return(
+            <div className="EmptyCartContainer">
+            <h1>Parece que no tenes productos en el carrito</h1>
+            <img src="https://res.cloudinary.com/dq7dgycv9/image/upload/v1738534686/transparent-icon-sad-shopping-bag-worried-shopping-bag-torn-sh-sad-wrinkled-empty-shopping-bag-hanging-on-wall6591176ca221a6.7145983617040075326641_wdwfmz.png"></img>
+            <Link to='/' className='Option'>Empezar a comprar</Link>
+        </div>
+        )
     }
     
     return (

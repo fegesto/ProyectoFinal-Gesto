@@ -24,3 +24,8 @@
         background-color: #713881;
         border-color: #713881;
 }
+
+.CheckoutImg{
+    max-width: 200px;
+    margin: 30px;
+}
